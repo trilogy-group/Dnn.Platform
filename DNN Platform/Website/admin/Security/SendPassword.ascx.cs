@@ -266,6 +266,11 @@ namespace DotNetNuke.Modules.Admin.Security
                         {
                             message = Localization.GetString("MultipleUsers", this.LocalResourceFile);
                         }
+                        else
+                        {
+                            message = Localization.GetString("InvalidUserName", this.LocalResourceFile);
+                            moduleMessageType = ModuleMessage.ModuleMessageType.RedError;
+                        }
 
                         canSend = false;
                     }
